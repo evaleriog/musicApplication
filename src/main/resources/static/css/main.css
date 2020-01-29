@@ -1,0 +1,11 @@
+body{
+    background-color: lightgray;
+}
+
+.jumbotron{
+    color: white;
+    background-image: url("../img/concert.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}

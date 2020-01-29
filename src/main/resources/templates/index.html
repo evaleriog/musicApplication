@@ -1,11 +1,25 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org" lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Music Application</title>
-</head>
+<head th:replace="partials/header :: head('Welcome to Music Application')"></head>
 <body>
-    <h1>Welcome to the music application</h1>
+<header>
+    <nav th:replace="partials/navbar :: top_navbar"></nav>
+
+    <div class="jumbotron jumbotron-fluid">
+        <div class="container">
+            <h1 class="dislay-4">Welcome to Music Application</h1>
+            <p class="lead">The app that let's you listen to music, follow your favorite artists,
+            and save your favorite songs and albums.</p>
+            <p class="lead">Keep scrolling for more info or sign up for an account.</p>
+        </div>
+    </div>
+</header>
+
+<main>
     <p>Test body to see if it works</p>
+</main>
+
+<footer th:replace="partials/footer :: main_footer"></footer>
+<th:block th:replace="partials/scripts :: page_scripts"></th:block>
 </body>
 </html>
