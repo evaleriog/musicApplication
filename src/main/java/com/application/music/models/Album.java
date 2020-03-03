@@ -1,5 +1,6 @@
 package com.application.music.models;
 
+import com.fasterxml.jackson.annotation.JsonManagedReference;
 import jdk.jfr.Enabled;
 
 import javax.persistence.*;
@@ -22,19 +23,62 @@ public class Album {
     @OneToOne
     private Artist artist;
 
-    @Column(length = 3)
-    private int totalSongs;
-
     @ManyToMany
     @JoinTable(
             name = "album_songs",
             joinColumns = {@JoinColumn(name="album_id")},
             inverseJoinColumns={@JoinColumn(name="song_id")}
     )
+    @JsonManagedReference
     private List<Song> songs;
 
+    public Album() {
+    }
 
-   // private int totalTime;
+    public Album(String name, String year, Artist artist, List<Song> songs) {
+        this.name = name;
+        this.year = year;
+        this.artist = artist;
+        this.songs = songs;
+    }
 
+    public long getId() {
+        return id;
+    }
 
+    public void setId(long id) {
+        this.id = id;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public String getYear() {
+        return year;
+    }
+
+    public void setYear(String year) {
+        this.year = year;
+    }
+
+    public Artist getArtist() {
+        return artist;
+    }
+
+    public void setArtist(Artist artist) {
+        this.artist = artist;
+    }
+
+    public List<Song> getSongs() {
+        return songs;
+    }
+
+    public void setSongs(List<Song> songs) {
+        this.songs = songs;
+    }
 }
