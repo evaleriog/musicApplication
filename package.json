@@ -1,0 +1,19 @@
+{
+  "name": "musicapplication",
+  "version": "1.0.0",
+  "description": "music application",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/evaleriog/musicApplication.git"
+  },
+  "author": "Eduardo Valerio Gamez",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/evaleriog/musicApplication/issues"
+  },
+  "homepage": "https://github.com/evaleriog/musicApplication#readme"
+}
