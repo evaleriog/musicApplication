@@ -1,11 +1,28 @@
 body{
     background-color: lightgray;
 }
-
-.jumbotron{
-    color: white;
+.parallax{
     background-image: url("../img/concert.jpg");
     background-position: center;
     background-repeat: no-repeat;
     background-size: 100% 100%;
+    background-attachment: fixed;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+}
+
+.register{
+    background-color: orangered;
+    height: 100vh;
+}
+
+.main-container{
+    background-color: rgba(0,0,0,0.5);
+    width: 50%;
+    height: 50%;
+    padding: 1em;
+    border-radius: 15px;
 }
