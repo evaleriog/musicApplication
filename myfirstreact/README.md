@@ -1,3 +1,6 @@
+##Music Application
+This is a practice project which I tried to emulate Spotify functionality
+using React and Spring Boot Framework with MVC model.
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
