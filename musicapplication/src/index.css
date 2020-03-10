@@ -30,6 +30,11 @@ body{
   color: white;
 }
 
+.navbar{
+  width: 100vw;
+  height: 10vh;
+}
+
 .register{
   background-color: orangered;
   height: 100vh;

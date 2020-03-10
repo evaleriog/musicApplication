@@ -1,5 +1,7 @@
 package com.application.music.models;
 
+import net.minidev.json.annotate.JsonIgnore;
+
 import javax.persistence.*;
 import java.util.List;
 
@@ -15,6 +17,7 @@ public class Song {
     private String name;
 
     @ManyToMany(mappedBy = "songs")
+    @JsonIgnore
     private List<Album> albums;
 
     @ManyToMany(cascade = CascadeType.ALL)
@@ -23,6 +26,7 @@ public class Song {
             joinColumns = {@JoinColumn(name="song_id")},
             inverseJoinColumns = {@JoinColumn(name="playlist_id")}
     )
+    @JsonIgnore
     private List<Playlist> playlists;
 
     @Column

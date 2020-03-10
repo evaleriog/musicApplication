@@ -2,10 +2,13 @@ package com.application.music.models;
 
 import com.fasterxml.jackson.annotation.JsonManagedReference;
 import jdk.jfr.Enabled;
+import lombok.Data;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 
 import javax.persistence.*;
 import java.util.List;
 
+@Data
 @Entity
 @Table(name="albums")
 public class Album {
@@ -23,13 +26,13 @@ public class Album {
     @OneToOne
     private Artist artist;
 
+    @JsonIgnore
     @ManyToMany
     @JoinTable(
             name = "album_songs",
             joinColumns = {@JoinColumn(name="album_id")},
             inverseJoinColumns={@JoinColumn(name="song_id")}
     )
-    @JsonManagedReference
     private List<Song> songs;
 
     public Album() {
