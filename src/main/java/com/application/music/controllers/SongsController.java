@@ -1,6 +1,7 @@
 package com.application.music.controllers;
 
 import com.application.music.models.Album;
+import com.application.music.models.Song;
 import com.application.music.repositories.AlbumRepository;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
@@ -20,5 +21,10 @@ public class SongsController {
     @GetMapping("/albums")
     List<Album> viewAllAlbums(){
         return albums.findAll();
+    }
+
+    @GetMapping("/album/id/songs")
+    List<Song> viewAllSongsPerAlbum(@PathVariable long id) {
+        return albums.getOne(id).getSongs();
     }
 }
