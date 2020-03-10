@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import {AlbumsContainer} from './AlbumsContainer';
+import {WelcomePage} from './WelcomePage.js';
 
 class Index extends React.Component{
     constructor(props){
@@ -13,12 +13,7 @@ class Index extends React.Component{
     }
 
     render() {
-        return(
-            <div className="card-deck">
-                <AlbumsContainer />
-            </div>
-
-        );
+        return <WelcomePage />
     }
 }
 // const myFirstElement = <h1 className="dislay-4">Welcome to Tempo</h1>

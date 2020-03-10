@@ -18,7 +18,6 @@ public class SongsController {
     }
 
     @GetMapping("/albums")
-//    public @ResponseBody
     List<Album> viewAllAlbums(){
         return albums.findAll();
     }
