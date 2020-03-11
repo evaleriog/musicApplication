@@ -37,6 +37,7 @@ public class SongsController {
         return albums.getOne(id).getSongs();
     }
 
+    //needs a better relationship
     @GetMapping("/artist/id/albums")
     List<Album> viewAllAlbumsPerArtist(@PathVariable long id){
 
@@ -51,6 +52,11 @@ public class SongsController {
     @GetMapping("/playlist/id/songs")
     List<Song> viewAllSongsPerPlaylist(@PathVariable long id){
         return playlists.getOne(id).getSongs();
+    }
+
+    @GetMapping("/songs/id/albums")
+    List<Album> viewAllAlbumsPerSong(@PathVariable long id){
+        return songs.getOne(id).getAlbums();
     }
 
 }
