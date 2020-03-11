@@ -51,4 +51,12 @@ public class Playlist {
     public void setUser(User user) {
         this.user = user;
     }
+
+    public List<Song> getSongs() {
+        return songs;
+    }
+
+    public void setSongs(List<Song> songs) {
+        this.songs = songs;
+    }
 }
