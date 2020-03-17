@@ -1,5 +1,4 @@
 import React from "react";
-import {NavigationBar} from "./NavigationBar";
 import 'bootstrap/dist/css/bootstrap.css';
 
 export class WelcomePage extends React.Component{
@@ -7,7 +6,6 @@ export class WelcomePage extends React.Component{
         return (
             <div className="container-fluid">
                 <header>
-                    <NavigationBar />
                     <div className="parallax">
                         <div className="main-container">
                             <div id="root"></div>

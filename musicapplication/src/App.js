@@ -1,26 +1,34 @@
-// import React from 'react';
-// import logo from './logo.svg';
-// import './App.css';
-//
-// function App() {
-//   return (
-//     <div className="App">
-//       <header className="App-header">
-//         <img src={logo} className="App-logo" alt="logo" />
-//         <p>
-//           Edit <code>src/App.js</code> and save to reload.
-//         </p>
-//         <a
-//           className="App-link"
-//           href="https://reactjs.org"
-//           target="_blank"
-//           rel="noopener noreferrer"
-//         >
-//           Learn React
-//         </a>
-//       </header>
-//     </div>
-//   );
-// }
-//
-// export default App;
+import React, {Component} from 'react';
+import './index.css';
+import {WelcomePage} from './WelcomePage.js';
+import {BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import {Albums} from "./Albums";
+import {NavigationBar} from "./NavigationBar";
+
+class App extends Component{
+    // constructor(props){
+    //     super(props);
+    // }
+
+    render() {
+        return (
+            <Router>
+                <div>
+                    <NavigationBar />
+                    <WelcomePage />
+
+                    <Switch>
+                        <Route exact path="/" render={(props) => (
+                            <WelcomePage />
+                        )}/>
+                        <Route exact path="/albums" component={Albums} />
+
+                    </Switch>
+                </div>
+            </Router>
+        )
+
+    }
+}
+
+export default App;

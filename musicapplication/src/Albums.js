@@ -2,9 +2,9 @@ import React from 'react';
 import 'bootstrap/dist/css/bootstrap.css';
 
 export class Albums extends React.Component{
-    constructor(props){
-        super(props);
-    }
+    // constructor(props){
+    //     super(props);
+    // }
 
     render(){
         let albums = this.props.albums;
@@ -16,7 +16,7 @@ export class Albums extends React.Component{
                     <div className="card-body">
                         <h5 className="card-title">{item.name}</h5>
                         <p className="card-text">{item.year}</p>
-                        <a href="#" className="btn btn-primary">{item.artist.name}</a>
+                        <p className="btn btn-primary">{item.artist.name}</p>
                     </div>
                 </div>
             ))
