@@ -5,9 +5,8 @@ import { Link } from 'react-router-dom';
 export class NavigationBar extends React.Component{
     render() {
         return(
-            <nav className="navbar navbar-dark bg-dark">
-                <div className="collapse navbar-collapse" id="navbarNav">
-                    <ul className="navbar-nav">
+            <nav>
+                    <ul>
                         <Link to="/">Home</Link>
                         {/*<li className="nav-item active">*/}
                         {/*    <a className="nav-link" href="#">Home</a>*/}
@@ -20,7 +19,6 @@ export class NavigationBar extends React.Component{
                         {/*    <a className="nav-link" href="#">Profile</a>*/}
                         {/*</li>*/}
                     </ul>
-                </div>
             </nav>
         )
     }
