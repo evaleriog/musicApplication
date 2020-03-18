@@ -35,9 +35,10 @@ class App extends Component{
                         <Route exact path="/albums" component={AlbumsContainer} />
                         <Route exact path="/albums/:id" render={(props) => {
                             let albumPosition = props.location.pathname.replace('/albums/', '');
+                            //alert(albumPosition);
                             return(
                                 <AlbumDetail
-                                    id={this.state.albums[albumPosition].id}
+                                    id={albumPosition}
                                 />
                             )
                         }}

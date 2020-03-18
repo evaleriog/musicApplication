@@ -6,15 +6,23 @@ export class AlbumDetail extends Component{
 
         this.state = {
             songs: []
-        }
+        };
 
         this.componentDidMount = this.componentDidMount.bind(this);
     }
 
     componentDidMount() {
         let id = this.props.id;
-        console.log(id);
-        fetch('http://localhost:8080/api/albums/' + id + '/songs')
+        let url = 'http://localhost:8080/api/albums/' + id + '/songs';
+        const options = {
+            method: 'GET',
+            headers: {
+                'Content-Type': 'application/json',
+                'mode': 'no-cors',
+            },
+        };
+
+        fetch(url, options)
             .then(response => response.json())
             .then(data => this.setState({songs: data}))
     }
