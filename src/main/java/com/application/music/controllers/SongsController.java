@@ -32,7 +32,7 @@ public class SongsController {
         return albums.findAll();
     }
 
-    @GetMapping("/album/id/songs")
+    @GetMapping("/albums/id/songs")
     List<Song> viewAllSongsPerAlbum(@PathVariable long id) {
         return albums.getOne(id).getSongs();
     }

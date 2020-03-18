@@ -1,10 +1,12 @@
 package com.application.music.models;
 
+import lombok.Data;
 import net.minidev.json.annotate.JsonIgnore;
 
 import javax.persistence.*;
 import java.util.List;
 
+@Data
 @Entity
 @Table(name = "songs")
 public class Song {
