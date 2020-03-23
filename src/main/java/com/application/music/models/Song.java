@@ -1,8 +1,7 @@
 package com.application.music.models;
 
 import lombok.Data;
-import net.minidev.json.annotate.JsonIgnore;
-
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import javax.persistence.*;
 import java.util.List;
 
@@ -18,17 +17,17 @@ public class Song {
     @Column(nullable = false, length = 100)
     private String name;
 
-    @ManyToMany(mappedBy = "songs")
     @JsonIgnore
+    @ManyToMany(mappedBy = "songs")
     private List<Album> albums;
 
+    @JsonIgnore
     @ManyToMany(cascade = CascadeType.ALL)
     @JoinTable(
             name="playlist_songs",
             joinColumns = {@JoinColumn(name="song_id")},
             inverseJoinColumns = {@JoinColumn(name="playlist_id")}
     )
-    @JsonIgnore
     private List<Playlist> playlists;
 
     @Column

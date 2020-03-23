@@ -1,10 +1,7 @@
 package com.application.music.models;
 
-import com.fasterxml.jackson.annotation.JsonManagedReference;
-import jdk.jfr.Enabled;
 import lombok.Data;
 import com.fasterxml.jackson.annotation.JsonIgnore;
-
 import javax.persistence.*;
 import java.util.List;
 

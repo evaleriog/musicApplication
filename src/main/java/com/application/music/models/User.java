@@ -1,8 +1,11 @@
 package com.application.music.models;
 
+import lombok.Data;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import javax.persistence.*;
 import java.util.List;
 
+@Data
 @Entity
 @Table(name="users")
 public class User {
@@ -20,11 +23,13 @@ public class User {
     @Column(nullable = false)
     private String username;
 
+    @JsonIgnore
     @Column(length = 500)
     private String password;
 
     boolean premium;
 
+    @JsonIgnore
     @OneToMany(cascade = CascadeType.ALL, mappedBy = "user")
     private List<Playlist> playlists;
 

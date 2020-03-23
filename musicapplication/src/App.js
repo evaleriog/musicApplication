@@ -7,19 +7,19 @@ import {NavigationBar} from "./NavigationBar";
 import {AlbumDetail} from "./AlbumDetail";
 
 class App extends Component{
-    constructor(props){
-        super(props);
-
-        this.state = {
-            albums: []
-        }
-    }
-
-    componentDidMount() {
-        fetch('http://localhost:8080/api/albums')
-            .then(response => response.json())
-            .then(data => this.setState({albums: data}))
-    }
+    // constructor(props){
+    //     super(props);
+    //
+    //     this.state = {
+    //         albums: []
+    //     }
+    // }
+    //
+    // componentDidMount() {
+    //     fetch('http://localhost:8080/api/albums')
+    //         .then(response => response.json())
+    //         .then(data => this.setState({albums: data}))
+    // }
 
     render() {
         return (
