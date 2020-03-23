@@ -1,7 +1,10 @@
 package com.application.music.models;
 
+import lombok.Data;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import javax.persistence.*;
 
+@Data
 @Entity
 @Table(name="artists")
 public class Artist {

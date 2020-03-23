@@ -1,8 +1,11 @@
 package com.application.music.models;
 
+import lombok.Data;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import javax.persistence.*;
 import java.util.List;
 
+@Data
 @Entity
 @Table(name = "playlists")
 public class Playlist {
@@ -13,10 +16,12 @@ public class Playlist {
     @Column
     private String name;
 
+    @JsonIgnore
     @ManyToOne
     @JoinColumn(name = "user_id")
     private User user;
 
+    @JsonIgnore
     @ManyToMany(mappedBy = "playlists")
     private List<Song> songs;
 
